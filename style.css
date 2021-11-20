@@ -1,0 +1,144 @@
+/* Root Variables */
+
+:root{
+
+    /* Basic Variants */
+
+    --black : #000;
+    --dimgray :#373737;
+    --gray :#5B5B5B;
+    --lightgray :#A4A4A4;
+    --white :#EDEDED;
+
+    /* Red Variants */
+    /* --red : #e60909;
+    --dimred : #f74646;
+    --lightred : #fa9090; */
+
+    /* Green Variants */
+    --green : #286e11;
+    --dimgreen : #4bcd20;
+    --lightgreen : #a2ed89;
+
+    /* Blue Variant */
+    --blue : #002bff;
+    --dimblue : #6d86ff;
+    --lightblue : #dbe1ff;
+}
+
+/* Light Variable */
+
+.white{
+    --col :var(--black);
+    --clockbg : var(--lightgray);
+    --navbg : var(--white);
+    --navcol : var(--black);
+    --clockcol :var(--black);
+}
+
+/* Black Variable */
+
+.black{
+    --col :var(--white);
+    --clockbg : var(--black);
+    --navbg : var(--dimgray);
+    --navcol : var(--lightgray);
+    --clockcol : var(--white);
+}
+
+/* Blue Variable */
+
+.blue{
+    --col :var(--blue);
+    --clockbg : var(--blue);
+    --navbg : var(--lightblue);
+    --navcol : var(--blue);
+    --clockcol : var(--lightblue);
+}
+
+/* Red Variable */
+/* 
+#red{
+    --col :var(--red);
+    --clockbg : var(--red);
+    --navbg : var(--lightred);
+    --navcol : var(--red);
+    --clockcol : var(--lightred);
+
+} */
+
+/* Green Variable */
+
+.green{
+    --col :var(--green);
+    --clockbg : var(--green);
+    --navbg : var(--lightgreen);
+    --navcol : var(--green);
+    --clockcol : var(--lightgreen);
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--col);
+    background-color: var(--navbg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    background-color: var(--navbg);
+    padding: 20px;
+}
+
+nav ul li {
+    padding: 10px 25px;
+    margin: 10px;
+    border: none;
+    display: inline;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bolder;
+    color: var(--navcol);
+    opacity: 1;
+    border: 1px solid var(--navcol);
+}
+
+nav ul{
+    text-align: center;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    background-color: var(--navcol);
+    color: var(--navbg);
+}
+
+header{
+    margin-bottom: 0.5em;
+    text-align: center;
+    background-color: var(--navbg);
+    color: var(--navcol);
+}
+
+div.clock{
+    background-color: var(--clockbg);
+    color: var(--clockcol);
+    padding: 20px;
+    margin: 20px 100px;
+    border-radius: 15px;
+    font-size: 144px;
+    line-height: 2;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+
+footer{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: x-large;
+    font-weight: normal;
+    text-align: center;
+    color: var(--navcol);
+}
